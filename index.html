@@ -1,97 +1,411 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  </head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>StudyHub JEE</title>
-     <style>
-       body  {
-         margin: 0;
-         font-family: Arial, sans-serif;
-         background: #f4f7fb;
-         color: #172554;
-       }
-       header {
-         background: #123c8c;
-         color: white;
-         padding: 28px 16px;
-         text-align: center;
-       }
-       main {
-         max-width: 800px;
-         margin: 25px auto;
-         paddingn: 16px;
-       }
-       .card {
-         background: white;
-         padding: 20px;
-         margin: 16px 
-         border-radius: 
-         box-shadow: 0 2px 8px #0001
-       }
-       a {
-         color: #123c8c;
-       }
-      </style>
-    </head>.     
-    <body>
-      <header>
-        <h1>StudyHub JEE</h1>
-        <p>Your free campanion for JEE Main & Advanced 2027</p>
-      </header>
-      <main>
-        <section class="card">
-          <h2>Welcome, Aspirant!</h2>
-          <p>Learn, practise and prepare for JEE one day at a time.</p>
-        </section>
-        <section class="card">
-          <h2>📘 physics</h2>
-          <p>Learn concepts, revise formulas, and practise JEE question.</p>
-        </section> 
-        physics: [
-        
-physics: [
-  ["Units and Measurements", "SI units, dimensions, significant figures and measurement errors.", "Check dimensions and units in every equation."],
-  ["Mathematical Tools and Vectors", "Scalars, vectors, components, dot product and cross product.", "Resolve vectors along convenient axes."],
-  ["Kinematics", "Straight-line motion, projectile motion, relative motion and circular motion.", "Use v = u + at for constant acceleration."],
-  ["Laws of Motion", "Newton's laws, free-body diagrams, friction, impulse and momentum.", "Net force: ΣF = ma."],
-  ["Work, Energy and Power", "Work by constant and variable forces, energy conservation and collisions.", "Work-energy theorem: Wnet = ΔK."],
-  ["Centre of Mass and Collisions", "Centre of mass, linear momentum conservation and elastic collisions.", "xCM = Σmᵢxᵢ / Σmᵢ."],
-  ["Rotational Motion", "Torque, angular momentum, moment of inertia and rigid-body equilibrium.", "Torque: τ = rF sin θ."],
-  ["Gravitation", "Gravitational field, potential, satellites, escape velocity and Kepler's laws.", "F = GMm/r²."],
-  ["Mechanical Properties of Solids", "Stress, strain, elasticity and elastic moduli.", "Young's modulus = longitudinal stress / longitudinal strain."],
-  ["Mechanical Properties of Fluids", "Pressure, buoyancy, continuity, Bernoulli's principle and viscosity.", "For ideal steady flow: A₁v₁ = A₂v₂."],
-  ["Thermal Properties of Matter", "Thermal expansion, calorimetry, heat transfer and specific heat.", "Heat exchanged: Q = mcΔT when there is no phase change."],
-  ["Thermodynamics", "Heat, work, internal energy, first law and thermodynamic processes.", "Using work done by the system: ΔU = Q − W."],
-  ["Kinetic Theory of Gases", "Ideal gases, molecular speeds, degrees of freedom and gas pressure.", "For an ideal gas: PV = nRT."],
-  ["Oscillations and Simple Harmonic Motion", "SHM, springs, pendulums, energy and time period.", "Spring-mass period: T = 2π√(m/k)."],
-  ["Waves and Sound", "Wave motion, superposition, standing waves, strings and sound.", "Wave speed: v = fλ."],
-  ["Electrostatics", "Charge, Coulomb's law, electric field, potential and Gauss's law.", "Coulomb force magnitude: F = k|q₁q₂|/r²."],
-  ["Capacitance", "Capacitors, dielectrics, combinations and stored energy.", "Parallel-plate capacitance in vacuum: C = ε₀A/d."],
-  ["Current Electricity", "Current, resistance, circuits, cells, Kirchhoff's laws and instruments.", "Ohm's law: V = IR."],
-  ["Magnetic Effects of Current", "Magnetic fields, Biot-Savart law, Ampere's law and Lorentz force.", "Moving-charge force magnitude: F = |q|vB sin θ."],
-  ["Magnetism and Matter", "Magnetic dipoles, bar magnets and magnetic properties of materials.", "A magnetic dipole experiences torque in a magnetic field."],
-  ["Electromagnetic Induction", "Magnetic flux, Faraday's law, Lenz's law and inductance.", "Induced emf: ε = −dΦB/dt."],
-  ["Alternating Current", "AC circuits, reactance, impedance, resonance and transformers.", "For a sinusoid: Vrms = V₀/√2."],
-  ["Electromagnetic Waves", "Properties, spectrum and applications of electromagnetic waves.", "In vacuum: c = fλ."],
-  ["Ray Optics", "Reflection, refraction, mirrors, lenses, prisms and optical instruments.", "Apply the correct sign convention in each formula."],
-  ["Wave Optics", "Interference, diffraction and polarization of light.", "For Young's double-slit experiment: fringe width β = λD/d."],
-  ["Dual Nature of Matter and Radiation", "Photoelectric effect, photons, de Broglie wavelength and matter waves.", "Photon energy: E = hν."],
-  ["Atoms", "Atomic models, hydrogen spectrum and energy levels.", "Hydrogen energy levels: Eₙ = −13.6/n² eV."],
-  ["Nuclei", "Nuclear size, binding energy, radioactivity and nuclear reactions.", "Mass-energy equivalence: E = mc²."],
-  ["Electronic Devices and Semiconductors", "Semiconductors, p-n junctions, diodes and basic electronic circuits.", "Understand forward and reverse bias."],
-  ["Experimental Skills and Measurements", "Measurement, errors, instruments, graphs and practical experiments.", "Record units, precision and significant figures."]
-],
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b83">
+  <meta name="description" content="Free JEE Main and Advanced 2027 study hub with chapter lists, formulas and practice questions.">
+  <title>StudyHub JEE 2027</title>
+  <style>
+    :root {
+      --blue: #17458f;
+      --dark: #17264c;
+      --bg: #f1f5fb;
+      --white: #ffffff;
+      --border: #dbe4f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #123579, #2462b4);
+      color: white;
+      text-align: center;
+      padding: 35px 18px;
+    }
+    header h1 { margin: 0; font-size: clamp(28px, 5vw, 42px); }
+    header p { margin: 8px 0 0; }
+    .wrap { max-width: 1050px; margin: auto; padding: 22px 16px 50px; }
+    .welcome, .panel {
+      background: var(--white);
+      padding: 22px;
+      border-radius: 16px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 14px #152b5010;
+    }
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .subject {
+      background: white;
+      color: var(--dark);
+      text-align: left;
+      padding: 22px;
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      cursor: pointer;
+      font: inherit;
+      transition: border-color .2s, transform .2s;
+    }
+    .subject:hover, .subject:focus-visible {
+      border-color: var(--blue);
+      transform: translateY(-2px);
+    }
+    .subject h2 { margin: 0 0 8px; font-size: 23px; }
+    .subject p { margin: 0; }
+    button, input, select { font: inherit; }
+    .primary, .small-btn {
+      background: var(--blue);
+      color: white;
+      border: 0;
+      padding: 10px 15px;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+    .small-btn { margin: 4px 4px 4px 0; }
+    .secondary {
+      background: #e7eef9;
+      color: var(--dark);
+      border: 0;
+      padding: 9px 13px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd6e5;
+      border-radius: 9px;
+      background: white;
+      color: var(--dark);
+    }
+    .chapter {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: #f8faff;
+      color: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    .chapter:hover { border-color: var(--blue); }
+    .chapter-detail {
+      padding: 15px;
+      background: #f0f5ff;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .muted { color: #5d6a82; }
+    .hidden { display: none !important; }
+    .question {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    .answer {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+      margin: 7px 0;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--dark);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .answer:disabled { cursor: default; opacity: 1; }
+    .result { font-weight: 600; margin-top: 8px; }
+    footer { text-align: center; padding: 20px; color: #65738a; }
+    @media (max-width: 500px) {
+      .wrap { padding: 14px 12px 35px; }
+      .welcome, .panel { padding: 17px; }
+      header { padding: 28px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 StudyHub JEE</h1>
+    <p>Your free companion for JEE Main &amp; Advanced 2027</p>
+  </header>
 
-        
-        <section class="card">
-          <h2>🧪 chemistry</h2>
-          <p>Study Physical, Organic, and Inorganic Chemistry.</p>
-        </section>
+  <main class="wrap">
+    <section class="welcome">
+      <h2>Welcome, Aspirant! 🎯</h2>
+      <p>Learn concepts, revise formulas, and practise one day at a time.</p>
+      <p><strong>Your goal:</strong> Understand concepts, solve questions, and revise regularly.</p>
+    </section>
 
-        <section class="card">
+    <section>
+      <h2>📚 Choose Your Subject</h2>
+      <div class="subjects">
+        <button class="subject" data-subject="physics">
+          <h2>📘 Physics</h2>
+          <p>Mechanics, electricity, optics and more.</p>
+          <p><strong>Open chapters →</strong></p>
+        </button>
+        <button class="subject" data-subject="chemistry">
+          <h2>🧪 Chemistry</h2>
+          <p>Physical, Organic and Inorganic Chemistry.</p>
+          <p><strong>Open chapters →</strong></p>
+        </button>
+        <button class="subject" data-subject="maths">
           <h2>📐 Mathematics</h2>
-          <p>Practise problems and strengthen your concepts.</p>
-        </section>
-        const chapter = { 
-          
+          <p>Algebra, calculus, coordinate geometry and more.</p>
+          <p><strong>Open chapters →</strong></p>
+        </button>
+      </div>
+    </section>
+
+    <section id="study" class="panel hidden" style="margin-top:24px">
+      <h2 id="subject-title">Chapters</h2>
+      <p class="muted">Select a chapter to see a revision note and formula where available.</p>
+      <input id="chapter-search" type="search" placeholder="Search chapters..." aria-label="Search chapters">
+      <div class="toolbar">
+        <button id="all-chapters" class="secondary">Show all chapters</button>
+        <button id="close-study" class="secondary">Close subject</button>
+      </div>
+      <div id="chapter-list"></div>
+      <div id="chapter-detail" class="chapter-detail hidden"></div>
+    </section>
+
+    <section class="panel">
+      <h2>🧠 Quick Practice</h2>
+      <p>Try these sample questions. Select an answer to check it.</p>
+      <div id="quiz"></div>
+      <p id="score" aria-live="polite" class="result"></p>
+      <button id="reset-quiz" class="secondary">Try again</button>
+    </section>
+
+    <section class="panel">
+      <h2>📅 Daily Study Checklist</h2>
+      <p class="muted">Tick each task as you complete it. Progress resets if the page is reloaded.</p>
+      <label><input class="task" type="checkbox" style="width:auto"> Watch and understand a lecture</label><br>
+      <label><input class="task" type="checkbox" style="width:auto"> Revise notes and formulas</label><br>
+      <label><input class="task" type="checkbox" style="width:auto"> Solve JEE-level questions</label><br>
+      <label><input class="task" type="checkbox" style="width:auto"> Review mistakes</label>
+      <p id="progress" class="result">Progress: 0/4 tasks</p>
+    </section>
+
+    <section class="panel">
+      <h2>Useful Links</h2>
+      <p>Use official sources for exam information and practice.</p>
+      <p><a href="https://jeemain.nta.nic.in/" target="_blank" rel="noopener">Official JEE Main website ↗</a></p>
+      <p><a href="https://jeeadv.ac.in/" target="_blank" rel="noopener">Official JEE Advanced website ↗</a></p>
+    </section>
+  </main>
+
+  <footer>StudyHub JEE 2027 · Learn • Practise • Improve</footer>
+
+  <script>
+    const chapters = {
+      physics: [
+        ["Units and Dimensions", "Learn SI units, dimensional formulae and dimensional analysis.", "Check the dimensions of both sides of an equation."],
+        ["Motion in a Straight Line", "Study position, displacement, velocity and acceleration.", "For constant acceleration: v = u + at; s = ut + ½at²."],
+        ["Motion in a Plane", "Revise vectors and projectile motion.", "Resolve vectors into horizontal and vertical components."],
+        ["Laws of Motion", "Study Newton's laws, free-body diagrams and friction.", "Net force: ΣF = ma."],
+        ["Work, Energy and Power", "Revise work, kinetic energy and conservation of energy.", "Work-energy theorem: Wnet = ΔK."],
+        ["Rotational Motion", "Study torque, angular momentum and moment of inertia.", "Torque magnitude: τ = rF sin θ."],
+        ["Gravitation", "Revise gravitational force, potential and satellites.", "F = GMm/r²."],
+        ["Thermodynamics", "Study heat, work and the first law.", "Using work done by the system: ΔU = Q − W."],
+        ["Oscillations and Waves", "Revise SHM, frequency, period and wave motion.", "For a spring-mass system: T = 2π√(m/k)."],
+        ["Electrostatics", "Study charge, electric field and potential.", "Coulomb's law: F = k|q₁q₂|/r²."],
+        ["Current Electricity", "Revise current, resistance and circuits.", "Ohm's law: V = IR."],
+        ["Magnetism", "Study magnetic forces and fields.", "For a moving charge: F = qvB sin θ."],
+        ["Electromagnetic Induction", "Study magnetic flux and induced emf.", "Faraday's law: ε = −dΦB/dt."],
+        ["Optics", "Revise mirrors, lenses and wave optics.", "Use the sign convention taught in your course."],
+        ["Modern Physics", "Study photons, atoms and nuclei.", "Photon energy: E = hν."]
+      ],
+      chemistry: [
+        ["Some Basic Concepts", "Revise mole concept, molar mass and stoichiometry.", "Number of moles: n = mass / molar mass."],
+        ["Atomic Structure", "Study quantum numbers, orbitals and electronic configuration.", "Maximum electrons in shell n: 2n²."],
+        ["Periodic Table", "Revise periodic trends and exceptions.", "Compare atomic size, ionisation energy and electronegativity."],
+        ["Chemical Bonding", "Study Lewis structures, VSEPR and hybridisation.", "Steric number helps predict ideal electron-pair geometry."],
+        ["Chemical Thermodynamics", "Revise enthalpy, entropy and Gibbs energy.", "At constant pressure, heat exchanged is ΔH."],
+        ["Chemical Equilibrium", "Study equilibrium constants and Le Chatelier's principle.", "For aA + bB ⇌ cC + dD, Kc = [C]^c[D]^d / ([A]^a[B]^b)."],
+        ["Ionic Equilibrium", "Revise pH, buffers and solubility.", "pH = −log₁₀[H⁺] for the usual concentration approximation."],
+        ["Redox Reactions", "Practise oxidation numbers and balancing redox equations.", "Oxidation is loss of electrons; reduction is gain."],
+        ["Electrochemistry", "Study cells, electrode potentials and conductivity.", "Use the Nernst equation with consistent units and conditions."],
+        ["Chemical Kinetics", "Revise rate laws and reaction order.", "For a first-order reaction: t½ = 0.693/k."],
+        ["Solutions", "Study concentration units and colligative properties.", "Molarity = moles of solute / volume of solution in litres."],
+        ["Coordination Compounds", "Revise ligands, coordination number and nomenclature.", "Determine oxidation state from the total charge."],
+        ["Organic Chemistry Basics", "Study nomenclature, isomerism and electronic effects.", "Practise inductive effect, resonance and acidity comparisons."],
+        ["Hydrocarbons", "Revise alkanes, alkenes, alkynes and aromatic compounds.", "Predict products using reaction conditions."],
+        ["Alcohols, Phenols and Ethers", "Study preparation, properties and reactions.", "Compare acidity using stability of the conjugate base."]
+      ],
+      maths: [
+        ["Sets, Relations and Functions", "Revise set operations, relations and function types.", "For finite sets: n(A ∪ B) = n(A) + n(B) − n(A ∩ B)."],
+        ["Complex Numbers", "Study algebra, modulus, argument and Argand plane.", "For z = a + ib, |z| = √(a² + b²)."],
+        ["Quadratic Equations", "Revise roots, discriminant and relations between roots.", "For ax² + bx + c = 0, D = b² − 4ac."],
+        ["Sequences and Series", "Study arithmetic and geometric progressions.", "AP sum: Sn = n/2 [2a + (n−1)d]."],
+        ["Binomial Theorem", "Practise expansion and general terms.", "General term: T(r+1) = nCr · a^(n−r) · b^r in (a+b)^n."],
+        ["Permutations and Combinations", "Revise counting principles and arrangements.", "nPr = n!/(n−r)!; nCr = n!/[r!(n−r)!]."],
+        ["Matrices and Determinants", "Study matrix operations and determinants.", "For a 2×2 matrix, determinant = ad − bc."],
+        ["Limits and Continuity", "Practise standard limits and continuity conditions.", "A limit exists when left-hand and right-hand limits agree."],
+        ["Differentiation", "Revise derivatives and chain rule.", "d(xⁿ)/dx = nxⁿ⁻¹."],
+        ["Applications of Derivatives", "Study tangents, normals, monotonicity and extrema.", "Critical points can occur where f′(x) = 0 or is undefined."],
+        ["Indefinite Integration", "Practise standard integrals and substitution.", "∫xⁿ dx = xⁿ⁺¹/(n+1) + C for n ≠ −1."],
+        ["Definite Integration", "Revise properties and area under curves.", "∫ₐᵇ f(x)dx = F(b) − F(a), where F′ = f."],
+        ["Differential Equations", "Study order, degree and solution methods.", "Separate variables when the equation permits it."],
+        ["Straight Lines and Circles", "Revise slope, line equations and circle equations.", "Circle with centre (h,k): (x−h)² + (y−k)² = r²."],
+        ["Conic Sections", "Study parabola, ellipse and hyperbola.", "Identify the standard equation before applying a formula."],
+        ["Vectors and 3D Geometry", "Revise dot products, cross products and lines in space.", "a·b = |a||b| cos θ."],
+        ["Probability", "Practise events, conditional probability and independence.", "P(A|B) = P(A∩B)/P(B), when P(B) > 0."]
+      ]
+    };
+
+    const subjectNames = {
+      physics: "📘 Physics",
+      chemistry: "🧪 Chemistry",
+      maths: "📐 Mathematics"
+    };
+
+    const study = document.getElementById("study");
+    const list = document.getElementById("chapter-list");
+    const detail = document.getElementById("chapter-detail");
+    const search = document.getElementById("chapter-search");
+    let currentSubject = "physics";
+
+    function renderChapters() {
+      const term = search.value.trim().toLowerCase();
+      list.innerHTML = "";
+      chapters[currentSubject]
+        .filter(ch => ch[0].toLowerCase().includes(term))
+        .forEach((ch, index) => {
+          const button = document.createElement("button");
+          button.className = "chapter";
+          button.textContent = (index + 1) + ". " + ch[0] + "  →";
+          button.addEventListener("click", () => showChapter(ch));
+          list.appendChild(button);
+        });
+      if (!list.children.length) {
+        list.textContent = "No matching chapters. Try another search.";
+      }
+    }
+
+    function showChapter(ch) {
+      detail.classList.remove("hidden");
+      detail.replaceChildren();
+      const title = document.createElement("h3");
+      title.textContent = ch[0];
+      const note = document.createElement("p");
+      note.textContent = ch[1];
+      const formula = document.createElement("p");
+      const strong = document.createElement("strong");
+      strong.textContent = "Revision reminder: ";
+      formula.append(strong, document.createTextNode(ch[2]));
+      detail.append(title, note, formula);
+    }
+
+    document.querySelectorAll("[data-subject]").forEach(button => {
+      button.addEventListener("click", () => {
+        currentSubject = button.dataset.subject;
+        document.getElementById("subject-title").textContent = subjectNames[currentSubject] + " Chapters";
+        search.value = "";
+        detail.classList.add("hidden");
+        renderChapters();
+        study.classList.remove("hidden");
+        study.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    search.addEventListener("input", renderChapters);
+    document.getElementById("all-chapters").addEventListener("click", () => {
+      search.value = "";
+      renderChapters();
+    });
+    document.getElementById("close-study").addEventListener("click", () => {
+      study.classList.add("hidden");
+    });
+
+    const questions = [
+      {
+        q: "A body starts from rest and accelerates at 2 m/s² for 3 s. Its final speed is:",
+        options: ["2 m/s", "3 m/s", "6 m/s", "9 m/s"],
+        correct: 2,
+        explanation: "v = u + at = 0 + 2 × 3 = 6 m/s."
+      },
+      {
+        q: "How many moles are present in 18 g of water? (Molar mass = 18 g/mol)",
+        options: ["0.5 mol", "1 mol", "2 mol", "18 mol"],
+        correct: 1,
+        explanation: "n = mass / molar mass = 18/18 = 1 mol."
+      },
+      {
+        q: "What is the derivative of x² with respect to x?",
+        options: ["x", "2x", "x³", "2"],
+        correct: 1,
+        explanation: "Using d(xⁿ)/dx = nxⁿ⁻¹, the derivative is 2x."
+      }
+    ];
+
+    let score = 0;
+    let answered = 0;
+    function renderQuiz() {
+      const quiz = document.getElementById("quiz");
+      quiz.innerHTML = "";
+      questions.forEach((item, qi) => {
+        const card = document.createElement("div");
+        card.className = "question";
+        const heading = document.createElement("p");
+        heading.textContent = (qi + 1) + ". " + item.q;
+        card.appendChild(heading);
+        const feedback = document.createElement("p");
+        feedback.className = "result";
+        feedback.setAttribute("aria-live", "polite");
+        item.options.forEach((option, oi) => {
+          const button = document.createElement("button");
+          button.className = "answer";
+          button.textContent = String.fromCharCode(65 + oi) + ". " + option;
+          button.addEventListener("click", () => {
+            if (button.disabled) return;
+            card.querySelectorAll(".answer").forEach(b => b.disabled = true);
+            answered++;
+            if (oi === item.correct) {
+              score++;
+              feedback.textContent = "Correct! " + item.explanation;
+            } else {
+              feedback.textContent = "Not quite. " + item.explanation;
+            }
+            document.getElementById("score").textContent =
+              "Score: " + score + "/" + answered + " answered";
+          });
+          card.appendChild(button);
+        });
+        card.appendChild(feedback);
+        quiz.appendChild(card);
+      });
+      document.getElementById("score").textContent = "Score: 0/0 answered";
+    }
+
+    document.getElementById("reset-quiz").addEventListener("click", () => {
+      score = 0;
+      answered = 0;
+      renderQuiz();
+    });
+
+    document.querySelectorAll(".task").forEach(task => {
+      task.addEventListener("change", () => {
+        const checked = document.querySelectorAll(".task:checked").length;
+        document.getElementById("progress").textContent = "Progress: " + checked + "/4 tasks";
+      });
+    });
+
+    renderQuiz();
+  </script>
+</body>
+</html>
